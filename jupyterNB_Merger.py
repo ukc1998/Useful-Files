@@ -23,7 +23,7 @@ def combine_ipynb_files(list_of_notebooks, combined_file_name):
             a['cells'].extend (b['cells']) 
 
     with open(combined_file_name, mode='w', encoding='utf-8') as file:
-        json.dump(a, f)
+        json.dump(a, file)
     
     print('Generated file: "{}".'.format(combined_file_name))
     
